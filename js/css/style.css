@@ -1,0 +1,1124 @@
+/* reseting default values */
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", sans-serif;
+}
+/************************************************************************
+*        Header       ***************************************************
+************************************************************************/
+.content-wrapper{    
+    display: inline-block;
+    float: left;
+    width: 1140px;
+    margin-left: calc(50% - 570px);
+}      
+
+header {
+    background-image: url('../img/background1.png');
+    display: inline-block;
+    float: left;    
+    width: 100%;   
+    height: 100vh;     
+    background-position: center 100% ;    
+    background-attachment: fixed;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+header * {
+    text-transform: uppercase;  
+}
+    header > nav {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        height: 70px;        
+        line-height: 70px;    
+        overflow: hidden;
+        background-color: transparent;
+        position: fixed; 
+        top: 0;   
+        z-index: 100;
+    }    
+        .nav-wrapper{
+            height: 70px;
+            width: 1140px;
+            margin-left: calc(50% - 570px);            
+        }    
+            header > nav > .nav-wrapper a {
+                text-decoration: none;
+                color: #fff;                
+            }
+                header > nav > .nav-wrapper > a:first-child {
+                    display: inline-block;
+                    float: left;
+                    font-size: 25px;                 
+                }
+
+            header > nav > .nav-wrapper >  .hamburgerMenu {
+                display: inline-block;
+                float: right;
+                width: 601px;
+                height: 20px;      
+                margin-top: 18px;  
+                margin-right: -20px;                       
+            }   
+                header > nav > .nav-wrapper >  .hamburgerMenu > a {
+                    display: inline-block;
+                    float: left;
+                    font-size: 14px;
+                    line-height: 16px;
+                    padding: 10px 17px;
+                    font-weight: 600;
+                    letter-spacing: 2px; 
+            }
+                    
+                    header > nav > .nav-wrapper >  .hamburgerMenu > a:hover {
+                        color: #345;
+                    }
+                /***    HAMBURGER ICON     ***/
+                 
+
+                header > nav > .nav-wrapper >  .hamburgerMenu > div > .hamburgerMenuIcon > div {
+                    display: inline-block;
+                    float: right;
+                    height: 2px;
+                    background-color: #7aa;
+                    margin: 5px 0;                    
+                    border-radius: 2px;
+                }
+                   
+                   .nav-wrapper:nth-child(2) {
+                       margin-top: 150px;                       
+                   }
+                 
+                  
+    header > div {
+        text-align: center;
+    }    
+        header > div > h3 {
+            font-size: 55px;
+            font-weight: 300;
+            text-transform: none;            
+            color: #f8f8f8da;
+            letter-spacing: 1px;
+        }   
+        header > div > h1 {
+            font-size: 90px;
+            font-weight: 600;
+            text-transform: none;
+            padding: 20px 0 40px;            
+            color: #f8f8f8a8;
+            letter-spacing: 1px;   
+            text-shadow: 2px 1px 5px rgba(255, 255, 255, 0.26); 
+            mix-blend-mode: luminosity;        
+        }     
+        header > div > p {
+            font-size: 15px;
+            font-weight: 300;    
+            padding: 0 0 50px;
+            letter-spacing: 2px;    
+        }  
+        header > div > button {
+            font-size: 16px;
+            padding: 22px 35px;
+            letter-spacing: 1px;
+            background-color: rgba(0, 0, 0, 0.548);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            cursor: pointer;
+        }
+            header > div > button:hover {
+                border-radius: 10px; 
+                transition: 0.3s;
+            }
+                header > div > button:hover {
+                    border-radius: 10px; 
+                    transition: 0.3s;
+                    transform: scale(1.05);
+                }
+            
+    header > .content-wrapper {
+        margin-top: calc(50vh - 75px);
+    }
+
+    nav.scroll {
+        background-color: rgba(255, 255, 255, 0.87);
+        box-shadow: 0px 5px 20px rgba(18, 114, 117, 0.322);
+        transition: 0.2s;
+    }
+    nav.scroll > div  a {
+        color:black;
+    }
+    
+        a.active {
+            background-color: #3b597196;
+            border-radius: 5px;     
+            color: red;       
+        }
+
+@media (max-width: 1200px) {
+    .nav-wrapper,
+    .content-wrapper{        
+        width: 94%;
+        margin-left: 3%;
+    }               
+}    
+
+@media (max-width: 991px) {
+    header > nav > .nav-wrapper >  .hamburgerMenu {
+        width: 461px;    
+        margin-right: -8px;           
+    } 
+        header > nav > .nav-wrapper >  .hamburgerMenu > a {        
+            padding: 10px 7px;   
+        }     
+
+        header > #home > h1 {
+            padding: 3px 0 19px;
+        }
+}
+
+@media (max-width: 767px) {    
+    header > nav {             
+        line-height: 47px; 
+        height: 47px;    
+    }        
+
+    nav.expand-menu {
+        background-color: rgba(255, 255, 255, 0.877);
+        height: 100vh;
+        transition: 1s;
+        min-height: 340px;
+        overflow-y: auto;
+    }
+        nav.expand-meniu > .nav-wrapper {
+            width: 90%;
+        }
+            nav.expand-menu > .nav-wrapper > a { 
+                color: #000;               
+                margin-bottom: 20px;
+                margin-left: 18%;
+            }
+
+                nav.expand-menu > .nav-wrapper > .hamburgerMenu {
+                    display: block;
+                    float: none;
+                    width: 100%;
+                }
+                    nav.expand-menu > .nav-wrapper > .hamburgerMenu > a {
+                        display: block;
+                        width: 60%;
+                        margin-left: calc(15% + 20px);
+                        color: #000;
+                    }                                      
+
+
+        header > nav > .nav-wrapper >  .hamburgerMenu {
+            display: none;
+        }
+            header > nav > .nav-wrapper > div > .hamburgerMenuIcon {
+                display: inline-block;
+                float: right;                
+                width: 40px;   
+                height: 40px;                    
+                cursor: pointer;
+                margin-top: 10px;
+                transition: 0.5s;
+            } 
+                         
+                header > nav > .nav-wrapper >  div > .hamburgerMenuIcon > div {
+                    margin: 4px 0 4px 20px;
+                    height: 2px;
+                    width: 20px;
+                    background-color: #fff;
+                    border-radius: 1px;
+                    transition: 0.5s;
+                }                    
+                header > nav > .nav-wrapper > div > .hamburgerMenuIcon:hover > div:nth-child(2) {
+                    margin: 5px 0 5px 20px;
+                    transition: 0.5s;
+                }
+                    header > nav.scroll > .nav-wrapper > div >  .hamburgerMenuIcon > div {
+                        background-color: #000;                        
+                    }
+                        /** hambutger animation **/
+                    nav.expand-menu > .nav-wrapper > .mobile-menu > a.hamburgerMenuIcon > div:nth-child(2) {
+                        display:none;
+                        transition: 0.5s;
+                    }
+                    nav.expand-menu > .nav-wrapper > .mobile-menu > a.hamburgerMenuIcon > div:first-child {
+                        transform: rotate(-135deg);
+                        background-color: #000;
+                        transition: 0.5s;
+                        margin-top: 10px;
+                    }
+                    nav.expand-menu > .nav-wrapper > .mobile-menu > a.hamburgerMenuIcon > div:last-child {
+                        transform: rotate(135deg);
+                        background-color: #000;
+                        transition: 0.5s;
+                        margin-top:-6px;                        
+                    }
+
+
+        header > div > h3 {
+            font-size: 28px;
+        }   
+        header > div > h1 {
+            font-size: 40px;
+            padding: 10px 0 15px;            
+        }     
+        header > div > p {
+            font-size: 15px;   
+            padding: 0 0 15px;    
+        }  
+        header > div > button {
+            font-size: 13px;
+            padding: 12px 25px;
+            border-radius: 16px;
+        }
+            header > div > button:hover {
+                border-radius: 10px; 
+                transition: 1s;
+            }
+}  
+
+@media (max-width: 480px) {
+    header > nav {
+        height: 35px;
+    }
+        header > nav > .nav-wrapper {
+            height: 35px;
+        }
+            header > nav > .nav-wrapper >.mobile-menu {
+                height: 35px;
+            }
+                header > nav > .nav-wrapper > div > .hamburgerMenuIcon {
+                    margin-top: 6px;
+                }
+            header > nav > .nav-wrapper > a:first-child {        
+                line-height: 35px;
+            }
+}
+/************************************************************************
+*        MAIN         ***************************************************
+************************************************************************/
+section {
+    display: inline-block;
+    float: left;    
+    width: 100%;
+    padding: 100px 0;
+}
+
+#services,
+.feedback,
+#contact {
+    background-color: rgba(221, 221, 221, 0.39);
+}
+
+main > section h2 {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 50px;
+}
+    main > section:first-child {
+        position: relative;
+    }
+    main > section:first-child h2{
+         position: absolute;
+         margin-top: 5px;
+         margin-left: calc(10% - 70px);
+         z-index: -1;
+    }
+
+    main > section h2 > span {
+        color: #7aa;
+    }
+   
+
+/******* ABOUT ME *********/
+.leftAbout, 
+.rightAbout {
+    display: inline-block;
+    float: left;
+}   
+    .leftAbout{
+        width: 35%;
+    }
+        #about img {    
+            max-width: 100%;  
+            border: 10px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 20px 10px rgba(128, 128, 128, 0.246);            
+        } 
+
+    .rightAbout{
+        width: 65%;
+        padding-left: 25px;
+    }       
+        .rightAbout > p {
+            text-align: justify;
+            margin-top: 10px;
+        }
+            .rightAbout > p:nth-child(2){
+                margin-top: 50px;
+            }
+
+        #social {
+            min-height: 40px;            
+            display: block;
+            float: left;
+            margin-top: 20px;
+        }    
+        #social > a{
+            display: inline-block;
+            float: left;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.616);
+            padding: 10px;
+            margin: 0px 5px;
+            margin-bottom: 5px;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            color: #fff;
+            overflow: hidden;            
+            text-align: center;
+        }
+            #social > a:hover {
+                border-radius: 20%;
+                transform: scale(1.1);
+                transition: 0.3s;
+                background-color: #7aa;
+            }
+                #social > a:hover > i {                    
+                    transform: scale(1.5);
+                    transition: 0.3s;                                        
+                }
+            #social > a > i {
+                display: inline-block;
+                float: left;
+                width: 100%;
+                line-height: 16px;                
+            }        
+
+        .aboutButtons {
+            height: 35px;
+            margin-top: 20px;
+            display: block;
+            float: left;
+            width: 100%;
+            
+        }
+            .aboutButtons button {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                padding: 5px 25px;
+                background-color: #7aa;
+                border-radius: 30px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                line-height: 30px;
+                border: none;
+                cursor: pointer;
+            }
+                .aboutButtons button:hover {
+                    border-radius: 5px;
+                    transition: 0.2s;
+                } 
+
+/******  MY SERVICES *********/
+#services {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+    #services > .content-wrapper {
+        width: 1160px;
+        margin-left: calc(50% - 580px);
+    }
+        .servicesItem {
+            display: inline-block;
+            width: calc(33.333% - 20px);
+            margin: 30px 10px 0 10px;  
+            font-size: 14px;            
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0px 20px 10px rgba(119, 170, 170, 0.116);
+            background-color: #fff;
+        }
+            .servicesItem > i {                
+                height: 70px;
+                width: 70px;
+                color: black;
+                font-size: 40px;
+                background-color: rgba(119, 170, 170, 0.472);
+                border-radius: 50%;
+                line-height: 70px;
+            }
+
+            .servicesItem > h3 {
+                font-size: 22px;
+                margin: 15px 0 10px;
+            }
+
+            .servicesItem > p {
+                line-height: 26px;
+                font-size: 16px;
+            }
+
+/***** RESUME *************/
+#resume > .content-wrapper > div {
+    display: inline-block;
+    float: left;
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    box-shadow: 0 0px 20px 10px rgba(119, 170, 170, 0.226);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+    #resume > .content-wrapper > div:last-child {
+        margin-right: 0;
+    }   
+        #resume > .content-wrapper > div > h4 {
+            text-align: center;
+            font-size: 22px;       
+            padding: 20px;
+            color: #7aa;
+            font-weight: 600;
+        }
+            .education > h5,
+            .work > h5 {
+                font-size: 16px;
+                font-weight: 600;
+                padding: 0 0 10px;
+            }
+            .education > div,
+            .work > div {
+                font-size: 14px;
+                font-style: italic;
+                margin-bottom: 5px;
+            }
+            .education > p,
+            .work > p {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+
+/** BLOG **/
+#blog {
+    overflow: hidden;
+    width: 1140px;
+    margin-left: calc(50% - 570px);  
+}
+    #blogItems {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 0;        
+    }
+        #blog > .content-wrapper {
+            width: 1160px;
+            margin-left: calc(50% - 580px);            
+        }
+            #blogItems > div {
+                display: inline-block;
+                width: calc((100% - 66px) / 3);
+                margin: 30px 11px 0 11px;  
+                font-size: 14px;   
+                border-radius: 15px;
+                box-shadow: 1px 5px 16px 8px rgba(119, 170, 170, 0.219);
+                background-color: #fff;
+                text-align: left;                
+            }
+                #blogItems > div > img {
+                    width: 100%;
+                    border-radius: 15px 15px 0 0;
+                }
+
+                #blogItems > div > a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 600;
+                    font-size: 18px;
+                    padding: 15px;
+                }
+                #blogItems > div > p {
+                    font-weight: 100;
+                    font-size: 14px;
+                    font-style: italic;
+                    padding: 15px;
+                }
+                #blogItems > div > p:last-child {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 500;
+                    font-size: 15px;
+                    padding: 15px;
+                    line-height: 26px;
+                }      
+
+        
+/** AVAILABLE **/
+.IAmAvailable {
+    background-color: rgba(44, 124, 138, 0.781);
+    position: relative;
+    box-shadow: 0px 0px 15px 20px rgb(44, 124, 138);
+}
+    .IAmAvailable::after{
+        content: "";
+        background-image: url('../img/available.jpeg');
+        opacity: 0.6;
+        background-size: cover;    
+        background-position: center 60%;
+        background-position-x: 53px;
+        background-repeat: none; 
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+    }
+
+    .IAmAvailable > .content-wrapper > h3{
+        font-size: 40px;
+        font-weight: 900;
+        color: rgba(119, 170, 170, 0.568);
+        mix-blend-mode: color-dodge;
+        text-transform: uppercase;
+        word-spacing: 10px;
+        text-align: center;
+        text-shadow: 0px 4px 5px black;    
+    }
+    .IAmAvailable > .content-wrapper > button {
+        box-shadow: 0 2px 10px 0px #000 ;
+        line-height: 50px;
+        padding: 0 25px;
+        border: none;
+        display: inline-block;
+        color: #000;
+        background-color:rgba(255, 255, 255, 0.555);
+        border-radius: 30px;
+        margin-top: 40px;
+        margin-left: calc(50% - 69px);    
+        font-size: 20px;    
+    }
+
+
+/**  PORTFOLIO    **/
+#gallery {
+    display: inline-block;
+    width: 100%;
+    text-align: center;    
+    overflow: hidden;
+}
+    #filter {
+        display: inline-block;
+        height: 30px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    #filter > .filterItem {        
+        display: inline-block;
+        padding: 5px 10px;
+    }
+        #filter > .filterItem:hover {
+            color: rgb(66, 238, 238);
+        }
+            #filter > .filterItem.active {
+                color: rgb(66, 238, 238);
+                background-color: rgba(0, 0, 0, 0.315);
+                border-radius: 5px;
+            }
+        
+    #gallery > .galleryList {
+        display: inline-block; 
+        margin-top: 25px;
+        width: 1160px;
+        margin-left: calc(50% - 580px);
+    }
+        #gallery > .galleryList > .galleryItem {
+            display: inline-block;
+            width: calc( (100% - 66px) / 3 );            
+            float: left;
+            background-image: url('../img/photoshop.jpg');
+            background-size: cover;
+            margin: 11px;
+            box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.123);
+            border-radius: 6px;
+            border: 10px solid #FFF;
+            position: relative;
+            background-size: cover;
+        }
+            #gallery > .galleryList > .galleryItem::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;       
+            }
+
+            
+            #gallery > .galleryList > .galleryItem > .hover {
+                display: none;
+                position: absolute;
+                color: white;
+                width: 100%;            
+            }
+            
+            #gallery > .galleryList > .galleryItem:hover > .hover {                
+                display: block;
+                background-color: rgba(0, 0, 0, 0.589);
+            }
+                #gallery > .galleryList > .galleryItem:hover > .hover > h4 {                
+                    position: absolute;
+                    top: 40px;
+                    left: 20px;
+                    font-size: 24px;
+                }
+                #gallery > .galleryList > .galleryItem:hover > .hover > label {
+                    position: absolute;
+                    top: 70px;
+                    left: 20px;
+                    font-size: 17px;
+                    background-color: #7aa;
+                    border-radius: 3px;
+                    padding: 6px 12px;                  
+                }
+@media (max-width: 1200px) {
+    #gallery > .galleryList {
+        display: inline-block; 
+        margin-top: 25px;
+        width: calc(100% + 26px);
+        margin-left: -10px;
+    }
+        #gallery > .galleryList > .galleryItem {        
+            width: calc( (100% - 72px) / 3 );       
+        }     
+        
+        /*  blog*/
+        #blog {
+            overflow: hidden;
+            width: 94%;
+            margin-left:3%;  
+        }
+            #blog > .content-wrapper {
+                width: calc(100% + 2px);
+                margin-left: -1px;
+            }  
+    }
+
+@media (max-width: 768px) {
+    #gallery > .galleryList {
+        width: calc(100% + 28px);
+        margin-left: -3px;
+    }
+    #gallery > .galleryList > .galleryItem {       
+        width: calc( (100% - 43px) / 2 );
+        margin: 5px;
+    }
+}
+
+/* feedback -carousell*/
+.carouselGallery {
+    display: inline-block;
+    width: 100%;
+}
+
+
+.carouselItem {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 50%;
+    margin-left: 25%;
+    height: 200px;
+}
+    .carouselItem > img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin-left: calc(50% - 25px);
+    }
+    .carouselItem > h4,
+    .carouselItem > p {
+        position: absolute;
+    }
+        .carouselItem > p {
+            top: 60px;
+            width: 100%;
+            text-align: center
+        }
+        .carouselItem > h4 {
+            top: 90px; 
+            width: 100%;
+            text-align: center
+        }
+        .carouselItem > p:last-child {
+            top: 120px;            
+        }
+    .feedback > .navigation {
+        display: inline-block;
+        width: 100%;        
+    }
+        .feedback > .navigation > a {
+            position: relative;
+            top:100px;
+        }
+            .feedback > .navigation > a:first-child {
+                float: left;
+            }
+            .feedback > .navigation > a:last-child {
+                float: right;
+            }
+
+
+/**    CONTACTS  **/
+#contact > .content-wrapper > form {
+    display: inline-block;
+    width: 45%;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.048);
+    margin-top: 50px;
+    padding: 15px;
+    margin-left: 8%
+}
+    #contact > .content-wrapper > form > div {        
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 47%;
+        margin: 25px 1.5% 0;
+        height: 40px;
+    }
+            #contact > .content-wrapper > form > div:nth-child(5) {            
+                width: 97%;
+                margin: 25px 1.4% 20px;
+                height: 60px;
+            }
+            #contact > .content-wrapper > form > div:last-child {
+                width: 97%;
+                text-align: center;
+                height: 70px;
+            }
+
+
+        #contact > .content-wrapper > form > div > input,
+        #contact > .content-wrapper > form > div > textarea {            
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            padding-top: 20px;
+            resize: none;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.103);  
+            border-radius: 2px;          
+            background-color: #fff !important;
+            background: white;            
+        }    
+            #contact > .content-wrapper > form > div > input[type=number]::-webkit-inner-spin-button,
+            #contact > .content-wrapper > form > div > input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none; 
+                margin: 0; 
+            } 
+            #contact > .content-wrapper > form > div > input:focus,
+            #contact > .content-wrapper > form > div > textarea:focus {
+                border-color: #7aa;
+            }
+            
+            #contact > .content-wrapper > form > div > input:focus + label,
+            #contact > .content-wrapper > form > div > textarea:focus + label{
+                top: -40px;
+                left: 3px;
+                font-size: 12px;
+                transition: 0.3s;
+                color: #7aa;
+            }   
+            #contact > .content-wrapper > form > div > textarea:focus + label{
+                top: -60px;;
+            }
+                #contact > .content-wrapper > form > div:not(:nth-child(4))> input:valid + label,
+                #contact > .content-wrapper > form > div > textarea:valid + label{
+                    top: -40px;
+                    left: 3px;
+                    font-size: 12px;
+                    transition: 0.3s;
+                    color: #7aa;
+                    transition: 0.3s;
+                }   
+                #contact > .content-wrapper > form > div > textarea:valid + label{
+                    top: -75px;
+                    left: 0;
+                    transition: 0.3s;
+                }
+    
+        #contact > .content-wrapper > form > div > button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #7aa;
+            color: #ffffffab;
+            border: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+            #contact > .content-wrapper > form > div > button:hover {
+                border-radius: 6px;
+                transition: 0.3s;
+                color: #fff;
+            }
+
+        #contact > .content-wrapper > form > div > label {
+            position: relative;
+            font-size: 16px;
+            top: -22px;
+            left: 5px;
+            z-index: 1;
+            text-transform: capitalize;
+            transition: 0.3s;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+#contactInfo {
+    display: inline-block;
+    width :  37%;
+    margin-left: 2%;    
+    margin-top: 50px;
+}
+
+    #contactInfo > .contactItem {        
+        padding: 10px 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.048);
+        margin-bottom: 20px;
+    }
+        .contactItem > i {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            font-size: 18px;
+            line-height: 50px;
+            height: 50px;
+            width: 50px;
+            background-color: #000;
+            color: white;
+            border-radius: 25px;
+        }
+
+        .contactItem > div {
+            display: inline-block;
+            margin-left: 20px;
+        }
+            .contactItem > div > h4{
+                font-size: 22px;
+            }
+            .contactItem > div > p{
+                font-size: 19px;
+                margin-top: 2px;
+            }
+                .contactItem > div > p > span{
+                    display: block;
+                }
+            .contactItem > div > a{
+                display: block;
+                margin-top: 5px;
+                color: #000;
+            }
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    /** my services**/
+    #services > .content-wrapper{
+        width: 94%;
+        margin-left: 3%;
+    }
+        .servicesItem {        
+            width: calc(50% - 10px);
+            margin: 20px  20px 0 0;
+            display: inline-block;
+        }
+            .servicesItem:nth-child(2n){   
+                margin-right: 0px;
+            }
+}
+
+
+@media (max-width:991px) {
+    /* contacts */
+    #contact > .content-wrapper > form > div {   
+        width: 97%;
+        margin: 25px 1.5% 0;
+    }            
+}
+
+
+
+   
+
+
+
+       
+@media (max-width: 767px) {
+    #about > .content-wrapper > div.leftAbout {
+        width: 100%;
+    }
+        #about > .content-wrapper > div.leftAbout > img {
+            margin: 0 50px 40px 50px;
+            max-width: calc(100% - 100px);
+        }
+
+    #about > .content-wrapper > div.rightAbout {
+        width: 100%;
+        padding-left: 0 ;
+    }
+     #about > .content-wrapper > div.rightAbout > h2, p {
+         margin-left: 0 ;
+         margin-bottom: 20px;
+     }
+
+    /* resume */
+    #resume > .content-wrapper > div > h4 {
+        text-align: left;
+        padding-left: 0; 
+    }
+    /* blog */
+    #blogItems > div {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+    
+    /* contact */
+    #contact > .content-wrapper > form {        
+        width: 70%;        
+        margin-left: 15%;
+    }
+    #contactInfo {
+        width :  50%;
+        margin-left: 25%;   
+    }
+}   
+
+@media (max-width: 480px) {
+    #about > .content-wrapper > div.leftAbout > img {
+        margin: 0 0 40px 0;
+        max-width: 100%;
+    }
+
+    header > div > p {
+        padding: 0 15px;
+    }
+    header > div > button {
+        margin-top: 20px;
+    }
+    /*my services*/
+    .servicesItem {        
+        width: 100%;
+        margin: 10px 0;
+    }
+    /* resume**/
+    #resume > .content-wrapper > div {
+        width: 100%;
+        margin: 10px 0;
+        background-color: #fff;
+    }
+     /* blogs */
+     #blogItems > div {
+        width: 100%;
+        margin: 20px 0px 0 0;
+    }
+    /*contacts*/
+    #contact > .content-wrapper > form {        
+        width: 90%;        
+        margin-left: 5%;
+    }
+    #contactInfo {
+        width :  80%;
+        margin-left: 10%; 
+    }
+}
+/************************************************************************
+*        Footer       ***************************************************
+************************************************************************/
+footer {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+    .subFooter {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 40px 0;
+    }   
+        .subFooter > h4 {
+            text-align: center;
+            color: #fff;
+            font-size: 22px;
+            letter-spacing: 3px;
+            font-weight: 300;
+            word-spacing: 5px
+        }
+        .subFooterIcons {
+            min-height: 40px;
+            text-align: center;
+            width: 250px;
+            margin-left: calc(50% - 125px);
+            margin-top: 30px;
+        }
+            .subFooterIcons > a{
+                display: inline-block;
+                float: left;
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 10px;
+                margin: 0px 5px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                color: #fff;
+                overflow: hidden;            
+                text-align: center;
+            }
+                .subFooterIcons > a:hover {
+                    border-radius: 20%;
+                    transform: scale(1.1);
+                    transition: 0.3s;
+                    background-color: #7aa;
+                }
+                    .subFooterIcons > a:hover > i {                    
+                        transform: scale(1.5);
+                        transition: 0.3s;                                        
+                    }
+                .subFooterIcons > a > i {
+                    display: inline-block;
+                    float: left;
+                    width: 100%;
+                    line-height: 20px;
+                }        
+
+    .footer {
+        background-color: rgba(0, 0, 0, 0.88);
+        padding: 25px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #ffffffc5;
+        letter-spacing: 2px;
+    }

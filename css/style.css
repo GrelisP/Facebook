@@ -1,0 +1,230 @@
+/****************
+*   RESET
+****************/
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none; 
+    color: #365899;   
+}
+
+i {
+    color: #999;
+}
+
+
+
+/*************************************************************************
+**************************************************************************
+
+*   HEADER
+
+**************************************************************************
+**************************************************************************/
+
+header {
+    width: 100%;
+    height: 40px;
+    background-color: #46b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+/*************************************************************************
+**************************************************************************
+
+*   MAIN
+
+**************************************************************************
+**************************************************************************/
+main {       
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: calc(100vh - 40px);
+}
+
+main > .feed-content{
+    display: inline-block;
+    float: left;
+    width: 510px;
+    margin-top: 40px;
+    margin-left: calc(50% - 260px);
+    
+} 
+aside {
+    display: inline-block;
+    float: left;
+    width: calc(50% - 260px);
+    background-color: #e8eaed;
+    height: calc(100vh - 40px);   
+    position: fixed;
+}   
+    aside.left {
+        top:40px;
+        left:0;
+    }
+    aside.right {
+        top:40px;
+        right:0;
+    }
+
+section {
+    display: block;
+    width: 510px;
+    margin: 10px 5px; 
+}
+
+/* main {
+    display: inline-block;
+    float: left;
+    width: 500px;    
+}
+    main > * {
+        display: inline-block;
+        float: left;
+        height: 100vh;
+    }    
+    main > aside {
+        width: calc(50% - 250px);
+        background-color: #e8eaed;
+    }
+    main > section {
+        
+        display: block;
+        width: 500px;
+    }        */
+    
+/***************************************** 
+*  write post ****************************
+******************************************/ 
+        .write-post {
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 500px;
+        }
+            .write-post-content {
+                cursor: text;
+            }
+            .write-post-top *,
+            .write-post-bottom *,
+            .write-post-content > img {
+                cursor: pointer;
+            }
+            
+
+        .write-post-top {
+            background-color: #f5f6f7; 
+            font-size: 11px;
+            padding: 8px;
+            border-bottom: 1px solid #dee0e3;
+            border-radius: 5px 5px 0 0;
+        }
+            .write-post-top > div  {
+                display: inline-block;
+                padding: 0 5px;
+
+            }
+                .write-post-top > div > i {
+                    padding: 0 5px 0 0;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+        .write-post-content {
+            background-color: #ffffff;
+            position: relative;
+        }           
+            .write-post-content::after {   /* border-bottom ( not full width ) */
+                content : "";
+                position: absolute;
+                left    : 1%;
+                bottom  : 0;
+                height  : 1px;
+                width   : 98%;  
+                border-bottom:1px solid #dee0e3;
+            }
+                .write-post-content > img {
+                    display: inline-block;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 12px;
+                }
+                .write-post-content > p {
+                    display: inline-block;
+                    line-height: 60px;
+
+                }
+
+        .write-post-bottom {
+            background-color: #ffffff;         
+            border-radius: 0 0 5px 5px;
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .write-post-bottom > * {
+            display: inline-block;
+            float: left;
+            width: 25%;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 20px;
+            background-color: #f5f6f7;
+            text-align: center;            
+        }
+            .write-post-bottom > div:last-child {
+                width: 30px;
+            }
+
+            .write-post-bottom > div > i {
+                color: #999;                
+                line-height: 17px;
+            }
+
+/***************************************** 
+*  news feed  ****************************
+******************************************/ 
+.feed-post {
+    border: 1px solid #dee0e3;
+    border-radius: 5px; 
+    margin: 10px;
+    width: 500px;
+}
+.feed-post-top{
+    display: inline-block;    
+    
+        
+}
+.feed-post-top > img {
+    display: inline-block;
+    float: left;
+    height: 40px;
+    border-radius: 50%;
+    margin: 12px;
+}
+.feed-post-top > div {
+    display: inline-block;
+    float: left;    
+    margin-top: 12px; 
+    height: 50px;
+    
+}
+.feed-post-top > div > p > a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #365899;
+
+}
