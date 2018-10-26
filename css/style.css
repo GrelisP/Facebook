@@ -58,10 +58,10 @@ main {
 main > .feed-content{
     display: inline-block;
     float: left;
-    width: 510px;
+    width: 520px;
     margin-top: 40px;
     margin-left: calc(50% - 260px);
-    
+    background-color: #e8eaed;    
 } 
 aside {
     display: inline-block;
@@ -83,7 +83,7 @@ aside {
 section {
     display: block;
     width: 510px;
-    margin: 10px 5px; 
+    margin: 0px 5px 10px; 
 }
 
 /* main {
@@ -112,7 +112,7 @@ section {
         .write-post {
             margin: 5px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 3px;
             width: 500px;
         }
             .write-post-content {
@@ -122,15 +122,14 @@ section {
             .write-post-bottom *,
             .write-post-content > img {
                 cursor: pointer;
-            }
-            
+            }            
 
         .write-post-top {
             background-color: #f5f6f7; 
             font-size: 11px;
             padding: 8px;
             border-bottom: 1px solid #dee0e3;
-            border-radius: 5px 5px 0 0;
+            border-radius: 3px 3px 0 0;
         }
             .write-post-top > div  {
                 display: inline-block;
@@ -165,12 +164,11 @@ section {
                 .write-post-content > p {
                     display: inline-block;
                     line-height: 60px;
-
                 }
 
         .write-post-bottom {
             background-color: #ffffff;         
-            border-radius: 0 0 5px 5px;
+            border-radius: 0 0 3px 3px;
             display: inline-block;
             width: 100%;
             padding: 10px 0;
@@ -188,43 +186,150 @@ section {
             .write-post-bottom > div:last-child {
                 width: 30px;
             }
-
-            .write-post-bottom > div > i {
-                color: #999;                
-                line-height: 17px;
-            }
+                .write-post-bottom > div > i {
+                    color: #999;                
+                    line-height: 17px;
+                }
 
 /***************************************** 
 *  news feed  ****************************
 ******************************************/ 
 .feed-post {
+    display: inline-block;
     border: 1px solid #dee0e3;
-    border-radius: 5px; 
-    margin: 10px;
+    border-radius: 3px; 
+    margin:  0px 10px 10px;
     width: 500px;
+    background-color: #ffffff;
 }
+/*post header*/
 .feed-post-top{
-    display: inline-block;    
+    display: inline-block;  
+    position: relative; 
+    width: 100%;    
+}
+    .feed-post-top > img {
+        display: inline-block;
+        float: left;
+        height: 40px;
+        border-radius: 50%;
+        margin: 12px;
+    }
+    .feed-post-top > div {
+        display: inline-block;
+        float: left;    
+        margin-top: 14px; 
+        height: 38px;    
+    }
+        .feed-post-top > div > p {            
+            margin-bottom: 4px;
+        }
+            .feed-post-top > div > p > a {
+                font-size: 14px;
+                font-weight: 600;
+                color: #365899;
+            }
+    .feed-post-top > i{
+        position: absolute;   
+        top: 13px;
+        right: 10px;
+    }
+    /*post content*/
+    .feed-post-content > p {
+        padding: 0 12px 12px;
+        font-size: 24px;
+    }
+        /*post content background variations*/
+        div [class *= bg-]{
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25px;
+        }
+        div.feed-post-content.bg-red{
+            background-color:red;
+        }   
+        div.feed-post-content.bg-green {
+            background-color: red;
+        }
     
-        
-}
-.feed-post-top > img {
-    display: inline-block;
-    float: left;
-    height: 40px;
-    border-radius: 50%;
-    margin: 12px;
-}
-.feed-post-top > div {
-    display: inline-block;
-    float: left;    
-    margin-top: 12px; 
-    height: 50px;
-    
-}
-.feed-post-top > div > p > a {
-    font-size: 14px;
-    font-weight: 600;
-    color: #365899;
+    /* post footer */
 
-}
+    .post-bottom-top {
+        width: calc(100% - 24px);
+        margin-left: 12px;
+        height: 42px;
+        position: relative;
+        padding: 4px 0;
+    }
+        .post-bottom-top::after {
+           position: absolute;
+           content: "";
+           height: 1px;
+           width: 100%;
+           background-color: #ccc;
+           left: 0;
+        }     
+        .post-bottom-top > span {
+            display: inline-block;
+            float: left;
+            width: calc((100% - 6px) / 3);
+            height: 34px;
+            margin: 4px 3px 4px 0;
+            text-align: center;
+            line-height: 34px;
+        }
+            .post-bottom-top > span:hover {
+                background-color: #f6f6f7;
+            }
+            .post-bottom-top > span:last-child {
+                margin-right: 0px;
+            }
+
+            .post-bottom-top > span > i{
+                font-size: 18px;
+                margin: 9px 5px 0 4px;
+            }
+    .post-bottom-bottom {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+        .post-bottom-bottom::after {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: #ccc;
+            left: 0;
+        }
+    .post-bottom-bottom > img {
+        display: inline-block;
+        float: left;
+        height: 30px;
+        border-radius: 50%;
+        margin: 12px;
+    }
+    .post-bottom-bottom > div {
+        display: inline-block;
+        float: left;
+        height: 30px;
+        margin-top: 12px;
+        background-color:#f2f3f5;
+        border: 1px solid #999;
+        border-radius: 15px;  
+        width: calc(100% - 66px); 
+        position: relative; 
+    }
+        .post-bottom-bottom > div > i {
+            line-height: 30px;
+            position: absolute;
+            right: 50px;
+        }
+        .post-bottom-bottom > div > i:first-child {
+            right: 10px;
+        }
+        .post-bottom-bottom > div > i:nth-child(2) {
+            right: 30px;
+        }
